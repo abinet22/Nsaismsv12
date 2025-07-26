@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="inventorymanagermain.aspx.cs" Inherits="SGIMSIMS.inventorymanagermain" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="inventorymanagermain.aspx.cs" Inherits="SGIMSIMS.inventorymanagermain" %>
 
 
 <!doctype html>
@@ -28,17 +28,19 @@
 
 
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/enhanced-ui.css">
 
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
 
     <form runat="server">
-    <!-- Left Panel -->
+    <!-- Enhanced Left Panel -->
 
-    <aside id="left-panel" class="left-panel">
+    <aside id="left-panel" class="left-panel enhanced-sidebar">
         <nav class="navbar navbar-expand-sm navbar-default">
 
             <div class="navbar-header">
@@ -125,8 +127,8 @@
 
     <div id="right-panel" class="right-panel">
 
-        <!-- Header-->
-        <header id="header" class="header">
+        <!-- Enhanced Header-->
+        <header id="header" class="header enhanced-header">
 
             <div class="header-menu">
 
@@ -196,10 +198,49 @@
         </div>
 
         <div class="content mt-3">
- <div class="col-sm-12">
-                <div class="alert  alert-success alert-dismissible fade show" role="alert">
-                    <span class="badge badge-pill badge-success">Success</span> የቀን መረጃዎችን እዚህ መመልከት ይችላሉ።
-                 
+                 <!-- Enhanced Metrics Cards -->
+                <div class="row mb-4">
+                    <div class="col-xl-3 col-lg-6 mb-4">
+                        <div class="metric-card metric-success slide-in-left">
+                            <div class="metric-icon">
+                                <i class="fa fa-cubes"></i>
+                            </div>
+                            <div class="metric-number">1,247</div>
+                            <div class="metric-label">Total Inventory</div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-6 mb-4">
+                        <div class="metric-card metric-warning slide-in-left" style="animation-delay: 0.1s;">
+                            <div class="metric-icon">
+                                <i class="fa fa-exclamation-triangle"></i>
+                            </div>
+                            <div class="metric-number">23</div>
+                            <div class="metric-label">Low Stock Items</div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-6 mb-4">
+                        <div class="metric-card metric-info slide-in-left" style="animation-delay: 0.2s;">
+                            <div class="metric-icon">
+                                <i class="fa fa-truck"></i>
+                            </div>
+                            <div class="metric-number">12</div>
+                            <div class="metric-label">Pending Orders</div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-6 mb-4">
+                        <div class="metric-card metric-danger slide-in-left" style="animation-delay: 0.3s;">
+                            <div class="metric-icon">
+                                <i class="fa fa-dollar"></i>
+                            </div>
+                            <div class="metric-number">$45,234</div>
+                            <div class="metric-label">Inventory Value</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-12">
+                <div class="enhanced-alert enhanced-alert-success fade-in" role="alert">
+                    <strong>Success!</strong> የቀን መረጃዎችን እዚህ መመልከት ይችላሉ።
                 </div>
             </div>
          <div id="pmpnote" runat="server"  class="col-sm-12" style="display:none; visibility:hidden">
@@ -277,7 +318,7 @@
     <script src="vendors/popper.js/dist/umd/popper.min.js"></script>
     <script src="vendors/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="assets/js/main.js"></script>
-
+    <script src="assets/js/enhanced-ui.js"></script>
 
     <script src="vendors/chart.js/dist/Chart.bundle.min.js"></script>
     <script src="assets/js/dashboard.js"></script>
